@@ -269,14 +269,15 @@ func initSettings(settingsService portainer.SettingsService, flags *portainer.CL
 					portainer.LDAPGroupSearchSettings{},
 				},
 			},
-			OAuthSettings:                      portainer.OAuthSettings{},
-			AllowBindMountsForRegularUsers:     true,
-			AllowPrivilegedModeForRegularUsers: true,
-			AllowVolumeBrowserForRegularUsers:  false,
-			EnableHostManagementFeatures:       false,
-			AllowHostNamespaceForRegularUsers:  true,
-			SnapshotInterval:                   *flags.SnapshotInterval,
-			EdgeAgentCheckinInterval:           portainer.DefaultEdgeAgentCheckinIntervalInSeconds,
+			OAuthSettings:                       portainer.OAuthSettings{},
+			AllowBindMountsForRegularUsers:      true,
+			AllowPrivilegedModeForRegularUsers:  true,
+			AllowVolumeBrowserForRegularUsers:   false,
+			AllowStackManagementForRegularUsers: true,
+			EnableHostManagementFeatures:        false,
+			AllowHostNamespaceForRegularUsers:   true,
+			SnapshotInterval:                    *flags.SnapshotInterval,
+			EdgeAgentCheckinInterval:            portainer.DefaultEdgeAgentCheckinIntervalInSeconds,
 		}
 
 		if *flags.Templates != "" {
